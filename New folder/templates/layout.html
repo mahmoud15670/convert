@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>
+      {% block title %}{% endblock %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- {% if night %}
+    <link href="/static/night.css" rel="stylesheet">
+    {% else %} -->
+    <link href="/static/css/bootstrap.css">
+    <link class="styleo" href="/static/style.css" rel="stylesheet">
+    <!-- {% endif %} -->
+    <link href="/static/logops.jpg" rel="icon">
+    <script src="/static/main.js"> </script>
+  </head>
+  <body>
+    <header>
+      <h1>Elmostafa Lab</h1>
+      <img src="/static/logops.jpg" width="150px" height="100px">
+      <h1>معمل المصطفى</h1>
+    </header>
+    <nav>
+    {% block nav%}{% endblock%}
+    <button class="night">night</button>
+    </nav>
+    
+    {% block main %}{% endblock %}
+    <!-- <nav>
+      <button >اتصل بنا</button>
+      <button id="result">النتائج</button>
+      <button id="search">البحث عن تحليل</button>
+     <select class="select">
+        <option selected disabled >=</option>
+        <option id="account" value="account">الصفحة الشخصية</option>
+        <option>رصيد النقاط</option>
+        <option>الاعدادات</option>
+        <option>خروج</option>
+     </select>
+ </nav> -->
+
+
+
+    <footer>
+          <p>مواعيد العمل :من السبت الى الخميس من الساعة 9ص الى الساعة 10م</p>
+          <p>العنوان:برج العرب الجديدة-امام مدخل 1200 بجوار مركز د\سعيد عبد الفضيل</p>
+          <p>الفرع الثانى:البرج القديم -شارع السنترال عمارة النائب رزق جالى</p>
+          <p>الفرع الثالث :برج العرب الجديدة -المسجد العتيق بجوار الشهر العقارى</p>
+          <p>copyright &#169; Elmostafa-lab 2018 - 2023</p>
+          <button style="position: relative;left: -42%;">الشكاوى و المقترحات</button> 
+    </footer>
+  </body>
+</html>

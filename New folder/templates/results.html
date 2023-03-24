@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title%}
+
+  نتائج التحاليل
+
+{% endblock %}
+
+{% block nav %}
+
+  <a href="/">الصفحة الرئيسية</a>
+
+{% endblock%}
+
+{% block main %}
+  <table>
+    <thead>
+      {% for person in names %}
+        <tr>
+          <td> {{person['id']}}</td>
+          <td> {{person['name']}}</td>
+          <td> {{person['grop']}} </td>
+          <td> {{person['price']}}</td>
+        </tr>
+      {% endfor %}
+    </thead>
+  </table>
+{% endblock %}

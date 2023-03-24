@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  family
+{% endblock %}
+
+{% block nav %}
+  <a href="/">الصفحة الرئيسية</a>
+{% endblock%}
+
+{% block main %}
+  <form action="/family" method="post">
+    <input type="text" placeholder="الاسم" name="name" autocomplete="off">
+    <input type="text" placeholder="صلة الفرابة" name="relasion" autocomplete="off">
+    <input type="submit" value="حفظ">
+  </form>
+{% endblock %}

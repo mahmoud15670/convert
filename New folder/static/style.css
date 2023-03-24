@@ -1,0 +1,96 @@
+nav a {
+  text-decoration: none;
+  color: rgb(85, 85, 85);
+  margin: 2.5px;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+nav {
+  background-color: gold;
+  position: sticky;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+  top: 10px;
+}
+form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  height: 160px;
+}
+footer {
+  position:relative;
+  bottom: 1%;
+  text-align: center;
+  display: revert;
+  width: 100%;
+  background-color: steelblue;
+  padding: 4px;
+}
+section{
+  text-align: center;
+  height: 800px;
+  display: inline-flex;
+  max-width: 75%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+aside{
+  height: auto;
+  width: 23%;
+  display: inline-flex;
+  flex-direction: column;
+}
+aside button{
+  display: block;
+  width: 100%;
+  height: 60px;
+  border-radius: 7px;
+  border: 1px solid rgb(118 118 118);
+  font-size: larger;
+  font-family: system-ui;
+  background-color: #429bf1;
+}
+
+aside button:hover{
+ background-color: #4d97d7bd;
+}
+aside .AD1{
+  text-align: center;
+  padding-top: 2px;
+  background-color: #fc8a2d;
+}
+aside .AD2{
+  margin-bottom: 20px;
+  padding-top: 2px;
+}
+aside .AD3{
+  text-align: center;
+  padding-top: 2px;
+  background-color: #3cec10;
+}
+.warrning {
+  background-color: #ff4949;
+  padding: 10px;
+  display: inline-block;
+}
+body {
+  text-align: center;
+}
+input {
+  text-align: center;
+}
+.dark{
+  background-color: cadetblue;
+}

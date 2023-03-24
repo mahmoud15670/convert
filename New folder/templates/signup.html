@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+  تسجيل الحساب
+
+{% endblock %}
+
+
+{% block main %}
+
+  <form action="/signup" method="post">
+    <input type="text" name="name" autocomplete="off" autofocus placeholder="الاسم">
+    <input type="text" name="phone" autocomplete="off" placeholder="رقم الهاتف">
+    <input type="password" name="password" autocomplete="off" placeholder="الرقم السرى">
+    <input type="password" name="repassword" autocomplete="off" placeholder="اعادة الرقم السرى">
+    <input type="submit" value="تسجيل">
+  </form>
+  {% if c %}
+  <p class="warrning">{{ c }}</p>
+  {% endif %}
+  {%endblock%}

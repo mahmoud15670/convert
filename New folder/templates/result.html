@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+  يحث عن التحاليل
+
+{% endblock %}
+
+{% block nav %}
+
+  <a href="/">الصفحة الرئيسية</a>
+
+{% endblock%}
+
+{% block main %}
+
+  <form action="/result" method="post">
+    <input type="text" name="name" autofocus autocomplete="off" placeholder="اسم الحالة">
+    <input type="submit" value="بحث">
+  </form>
+
+{% endblock %}
