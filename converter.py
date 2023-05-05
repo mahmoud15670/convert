@@ -7,4 +7,4 @@ with open("input.txt") as file:
 
 with open("output.html") as file:
     for row in doc:
-        if catches := search(r'(<\?[ابجدهوزكلمنحطىسعفصقرشتثخذضظغية ]+)>')
+        if catches := search(r'(<\?[ابجدهوزكلمنحطىسعفصقرشتثخذضظغية ]+)>', row)
