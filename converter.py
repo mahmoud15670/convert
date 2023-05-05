@@ -19,6 +19,7 @@ with open("output.html", "w") as file:
         if catches := search(r'^<(/?[ابجدهوزكلمنحطى سعفصقرشتثخذضظغية]+)( ([ابجدهوزكلمنحطى سعفصقرشتثخذضظغي]+)=".+")?>$', row):
          if catches.group(1) in tags:
            file.write('<' + tags[catches.group(1)] + '>\n')
+           print(catches.group(2))
          else:
            file.write('</' + tags[catches.group(1)[1:]] + '>/n')
         else:
