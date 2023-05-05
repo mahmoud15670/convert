@@ -16,7 +16,7 @@ with open("input.txt") as file:
 print(doc)
 with open("output.html", "w") as file:
     for row in doc:
-        if catches := search(r'^<(/?[ابجدهوزكلمنحطى سعفصقرشتثخذضظغية]+)>$', row):
+        if catches := search(r'^<(/?[ابجدهوزكلمنحطى سعفصقرشتثخذضظغية]+)( ([ابجدهوزكلمنحطى سعفصقرشتثخذضظغي]+)=".+")?>$', row):
          if catches.group(1) in tags:
            file.write('<' + tags[catches.group(1)] + '>\n')
          else:
