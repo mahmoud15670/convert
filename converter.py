@@ -3,7 +3,10 @@ from re import search
 doc=[]
 tags={
    'تعريف الملف':"!DOCTYPE html",
-   'البداية':"html"
+   'البداية':"html",
+   'الراس':"head",
+   'الجسم':"body",
+   'فقرة':"p"
 }
 attr={
   'تصميم':"style",
