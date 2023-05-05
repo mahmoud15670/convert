@@ -2,7 +2,8 @@ from re import search
 
 doc=[]
 tags={
-   'تعريف الملف':"!DOCTYPE html"
+   'تعريف الملف':"!DOCTYPE html",
+   'البداية':"html"
 }
 with open("input.txt") as file:
     for row in file:
