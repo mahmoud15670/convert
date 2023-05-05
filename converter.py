@@ -5,6 +5,10 @@ tags={
    'تعريف الملف':"!DOCTYPE html",
    'البداية':"html"
 }
+attr={
+  'تصميم':"style",
+  'لينك':"herf"
+}
 with open("input.txt") as file:
     for row in file:
         doc.append(row)
