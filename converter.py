@@ -7,5 +7,5 @@ with open("input.txt") as file:
 
 with open("output.html", "w") as file:
     for row in doc:
-        if catches := search(r'(<\?[ابجدهوزكلمنحطىسعفصقرشتثخذضظغية ]+)>', row):
+        if catches := search(r'<(\?[ابجدهوزكلمنحطىسعفصقرشتثخذضظغية ]+)>', row):
             print(catches.group(1))
