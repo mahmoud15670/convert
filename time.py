@@ -17,8 +17,16 @@ class User:
     def timer(self, time):
          if not time:
             raise ValueError('invalid time')
-         self.time = time
-         return self.time
+         self.in_time = time
+         return self.in_time
+
+    def out(self, time):
+        self.out_time = time
+        return self.out_time
+
+    def counter(self):
+        count = self.out_time - self.in_time
+        self.hours = count
 
 
 name = input('the name ')
