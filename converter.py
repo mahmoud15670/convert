@@ -16,7 +16,6 @@ with open("input.txt") as file:
   for row in file:
     doc.append(row)
 
-print(doc)
 with open("output.html", "w") as file:
   for row in doc:
     if catches := search(r'^<(/?[ابجدهوزكلمنحطى سعفصقرشتثخذضظغية]+)( ([ابجدهوزكلمنحطى سعفصقرشتثخذضظغي]+)=".+")?>$', row):
