@@ -1,5 +1,7 @@
 class User:
     def __init__(self, name, password):
+        if not name:
+            raise ValueError('missing name')
         self.name = name
         self.password = password
 
