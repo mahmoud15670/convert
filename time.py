@@ -18,3 +18,5 @@ try:
     user = User(name, password)
 except ValueError:
     print('you missed an input')
+else:
+    print(user)
