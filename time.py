@@ -3,7 +3,7 @@ class User:
         if not name:
             raise ValueError('missing name')
         if not password:
-            raise ValueError('missing password)
+            raise ValueError('missing password')
         self.name = name
         self.password = password
 
