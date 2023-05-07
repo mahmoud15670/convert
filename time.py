@@ -9,7 +9,7 @@ class User:
 
 
     def __str__(self):
-        return f"user name is {self.name}
+        return f"user name is {self.name}"
 
 
 name = input('the name ')
