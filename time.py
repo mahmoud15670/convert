@@ -15,9 +15,11 @@ class User:
         return f"user name is {self.name}"
 
     def timer(self, time):
-        if not time:
+         if not time:
             raise ValueError('invalid time')
-        return self.time = time
+         self.time = time
+         return self.time
+
 
 name = input('the name ')
 password = input('password ')
