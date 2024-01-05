@@ -1,29 +1,12 @@
-from re import search
+import subprocess
 
-doc=[]
-tags={
-  'تعريف الملف':"!DOCTYPE html",
-  'البداية':"html",
-  'الراس':"head",
-  'الجسم':"body",
-  'فقرة':"p"
-}
-attr={
-  'تصميم':"style",
-  'لينك':"herf"
-}
-with open("input.txt") as file:
-  for row in file:
-    doc.append(row)
+def convert_wmv_to_mp4(input_file, output_file):
+    try:
+        subprocess.run(['ffmpeg', '-i', input_file, output_file])
+        print(f"Conversion successful: {output_file}")
+    except Exception as e:
+        print(f"Conversion failed: {e}")
 
-with open("output.html", "w") as file:
-  for row in doc:
-    if catches := search(r'^<(/?[ابجدهوزكلمنحطى سعفصقرشتثخذضظغية]+)( ([ابجدهوزكلمنحطى سعفصقرشتثخذضظغي]+)=".+")?>$', row, flags=re.ALL):
-      if catches.group(1) in tags:
-        file.write('<' + tags[catches.group(1)] + '>\n')
-      elif catches.group() in tags and catches.group(3) in attr:
-        file.write('<' + tags[catches.group(1)] + ' ' + attr[catches.group(3)] + catches.group(2).replace(catches.group(3),'') + '>\n')
-      else:
-        file.write('</' + tags[catches.group(1)[1:]] + '>/n')
-    else:
-      file.write(row)
+# Replace 'input.wmv' and 'output.mp4' with your file names
+input = input('input.wmv')
+convert_wmv_to_mp4(input, 'output.mp4')
